@@ -9,7 +9,7 @@ namespace Player
         private float minHealth = 0;
         private float currentHealth;
         private static Player player;
-        [SerializeField] public static Transform prefabPlayer;
+        [SerializeField] private static Transform prefabPlayer;
 
         private Player()
         {
@@ -23,7 +23,11 @@ namespace Player
                 player = Instantiate(prefabPlayer).GetComponent<Player>();
                 // player = Instantiate(new Player());
             }
+
+
             return player;
+
+            
         }
     }
 }
