@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ namespace Game
     public class UIManager : MonoBehaviour
     {
         public Text uiHealth;
-        
+
         void Start()
         {
             
@@ -20,8 +21,14 @@ namespace Game
 
         void showHealth()
         {
+           
+            void OnGUI()
+            {
+                
+                //uiHealth.text = " Health:" + currentHealth;
+            }
             
-            //Player.Player.getInstance().HealthPotion();
+            
             //uiHealth.text = " Score:" + currenthealth.ToString();
         }
     }

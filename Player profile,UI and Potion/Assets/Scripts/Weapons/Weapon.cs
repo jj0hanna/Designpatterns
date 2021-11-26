@@ -8,6 +8,7 @@ namespace Weapons
         private float bulletSpeed;
         private static Weapon weapon;
         
+        
 
         private Weapon()
         {

@@ -1,4 +1,5 @@
 using System;
+using drinkObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -52,6 +53,13 @@ namespace Player
         private void OnMove(InputValue input)
         {
             dir = input.Get<Vector2>();
+        }
+
+        private void OnDrinkPotion(InputValue input)
+        {
+            //Add 10hp to currenthealth in Playerscript2
+            
+            HealthPotion.healthpotions -= 1; // remove one healthpotion
         }
 
     }
