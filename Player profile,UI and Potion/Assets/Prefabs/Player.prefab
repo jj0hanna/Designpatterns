@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5740395529620059169}
   - component: {fileID: 5740395529620059231}
   - component: {fileID: 5740395529620059168}
-  - component: {fileID: 5740395529620059170}
+  - component: {fileID: 720463}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movmentSpeed: 5
   rotSpeed: 5
---- !u!114 &5740395529620059170
+--- !u!114 &720463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5740395529620059175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f68295199f2914484bc3594fb99610, type: 3}
+  m_Script: {fileID: 11500000, guid: 477388b1cda73f54caf3db6f44274768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiHealth: {fileID: 0}
+  OrgprefabPlayer: {fileID: 5740395529620059175}

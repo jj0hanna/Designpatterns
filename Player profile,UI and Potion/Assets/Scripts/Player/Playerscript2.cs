@@ -1,33 +1,46 @@
+using System;
 using UnityEngine;
 
 namespace Player
 {
     public class Playerscript2 : MonoBehaviour
     {
-        private float currenthealth;
-        private static Player player;
+        [SerializeField] private GameObject OrgprefabPlayer;
+        private static float currenthealth;
+        private static Playerscript2 player;
         private static GameObject prefabPlayer;
         
-      private Playerscript2()
+        
+      static Playerscript2()
       {
-          this.currenthealth = 100;
+          currenthealth = 100;
       }
       
 
       public static Playerscript2 getInstance()
       {
-          if (player == null)
-          {
-              player = Instantiate(prefabPlayer).GetComponent<Player>();
-          }
+       //  if (player == null)
+       //  {
+       //      player = ((GameObject) Instantiate(Resources.Load("Player"))).GetComponent<Playerscript2>();
+       //  }
 
-          return prefabPlayer.AddComponent<Playerscript2>();
+         return player;
 
       }
-    }
 
-    public class Renderer: MonoBehaviour
-    {
-        
+      public static float getHP()
+      {
+          return currenthealth;
+      }
+
+      public static void addHP(float hp)
+      {
+          currenthealth += hp;
+      }
+
+      private void Awake()
+      {
+          prefabPlayer = OrgprefabPlayer;
+      }
     }
 }

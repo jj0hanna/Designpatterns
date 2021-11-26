@@ -22,12 +22,7 @@ namespace Game
         void showHealth()
         {
            
-            void OnGUI()
-            {
-                
-                //uiHealth.text = " Health:" + currentHealth;
-            }
-            
+                uiHealth.text = " Health:" + Playerscript2.getHP();
             
             //uiHealth.text = " Score:" + currenthealth.ToString();
         }
