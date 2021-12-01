@@ -1,4 +1,6 @@
 using System;
+using drinkObjects;
+using UnityEditor;
 using UnityEngine;
 
 namespace Player
@@ -9,6 +11,8 @@ namespace Player
         private static float currenthealth;
         private static Playerscript2 player;
         private static GameObject prefabPlayer;
+
+        public InventoryObject inventory;
         
         
       static Playerscript2()
@@ -38,9 +42,19 @@ namespace Player
           currenthealth += hp;
       }
 
-      private void Awake()
+      public void OnTriggerEnter(Collider other) // if collide with a item
       {
-          prefabPlayer = OrgprefabPlayer;
+          var item = other.GetComponent<HealthPotion>();
+          if (item)
+          {
+              inventory.AddItem(item.item,1);
+              Destroy(other.gameObject);
+          }
+      }
+
+      private void OnApplicationQuit()
+      {
+          inventory.Container.Clear();
       }
     }
 }

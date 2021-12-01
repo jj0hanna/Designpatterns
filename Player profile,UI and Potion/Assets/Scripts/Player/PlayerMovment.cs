@@ -57,16 +57,16 @@ namespace Player
 
         private void OnDrinkPotion(InputValue input)
         {
-            ref int healtPotions = ref HealthPotion.healthpotions; // refferensen av. minnesplatsen av det jag vill ha. Kolla upp mer
-            if (healtPotions > 0)
-            {
-                Playerscript2.addHP(HealthPotion.hp);
-                healtPotions--;
-            }
-            else if (healtPotions <= 0)
-            {
-                Debug.Log("you dont have any potions sorii");
-            }
+          // ref int healtPotions = ref HealthPotion.healthpotions; // refferensen av. minnesplatsen av det jag vill ha. Kolla upp mer
+          // if (healtPotions > 0)
+          // {
+          //     Playerscript2.addHP(HealthPotion.hp);
+          //     healtPotions--;
+          // }
+          // else if (healtPotions <= 0)
+          // {
+          //     Debug.Log("you dont have any potions sorii");
+          // }
             
         }
 
