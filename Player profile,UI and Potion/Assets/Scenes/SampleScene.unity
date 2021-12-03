@@ -327,6 +327,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthPotion (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5983678357408026211, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5983678357408026220, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -500,7 +504,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 29.148, y: 0, z: 0}
---- !u!1 &985791934
+--- !u!1 &984581444
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -508,10 +512,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 985791935}
-  - component: {fileID: 985791938}
-  - component: {fileID: 985791937}
-  - component: {fileID: 985791936}
+  - component: {fileID: 984581445}
+  - component: {fileID: 984581448}
+  - component: {fileID: 984581447}
+  - component: {fileID: 984581446}
   m_Layer: 5
   m_Name: InventoryScreen
   m_TagString: Untagged
@@ -519,44 +523,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &985791935
+--- !u!224 &984581445
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985791934}
+  m_GameObject: {fileID: 984581444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1681407498}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 733.1791, y: 224.30591}
-  m_SizeDelta: {x: -1466.3582, y: -448.6118}
+  m_AnchoredPosition: {x: 461.5, y: 83.5}
+  m_SizeDelta: {x: -931, y: -177}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &985791936
+--- !u!114 &984581446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985791934}
+  m_GameObject: {fileID: 984581444}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 731daa6028b9d4d4e9f873a1d48a606e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &985791937
+  inventory: {fileID: 11400000, guid: 7502a43b48063ff4597579a422bc5d58, type: 2}
+  xStart: -33
+  yStart: 60
+  xSpace: 65
+  ySpace: 60
+  numberOfColumn: 2
+--- !u!114 &984581447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985791934}
+  m_GameObject: {fileID: 984581444}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -580,13 +590,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &985791938
+--- !u!222 &984581448
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985791934}
+  m_GameObject: {fileID: 984581444}
   m_CullTransparentMesh: 1
 --- !u!1 &993260382
 GameObject:
@@ -684,11 +694,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1681407498}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 323}
+  m_AnchoredPosition: {x: 0, y: 104}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1422103606
@@ -824,8 +834,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 984581445}
   - {fileID: 1422103605}
-  - {fileID: 985791935}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -987,6 +997,10 @@ PrefabInstance:
       propertyPath: uIinventory
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5740395529620059168, guid: 4fc1d88e23229d345a130eb04aff51c6, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 11400000, guid: 7502a43b48063ff4597579a422bc5d58, type: 2}
     - target: {fileID: 5740395529620059171, guid: 4fc1d88e23229d345a130eb04aff51c6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1044,10 +1058,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5983678357408026208, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
-      propertyPath: item
-      value: 
-      objectReference: {fileID: 11400000, guid: 40de16c0ecc87b24db832ed94b22f64f, type: 2}
     - target: {fileID: 5983678357408026209, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
       propertyPath: m_Name
       value: HealthPotion

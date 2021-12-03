@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,20 @@ public class InventoryObject : ScriptableObject
             Container.Add(new InventorySlot(Item, Amount));
         }
     }
+
+    public void RemoveItem(ItemObject Item, int Amount)
+    {
+        
+        for (int i = 0; i < Container.Count; i++)
+        {
+            if (Container[i].item == Item)
+            {
+                Container[i].RemoveAmount(Amount);
+                break;
+            }
+        }
+        
+    }
 }
 [System.Serializable]
 public class InventorySlot
@@ -40,5 +55,9 @@ public class InventorySlot
     public void AddAmount(int value)
     {
         amount += value;
+    }
+    public void RemoveAmount(int value)
+    {
+        amount -= value;
     }
 }

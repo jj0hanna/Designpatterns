@@ -48,6 +48,7 @@ namespace Player
           if (item)
           {
               inventory.AddItem(item.item,1);
+              Debug.Log(item.item);
               Destroy(other.gameObject);
           }
       }

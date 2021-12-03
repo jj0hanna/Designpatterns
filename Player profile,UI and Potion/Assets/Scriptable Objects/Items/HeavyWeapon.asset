@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5590cb583abf8e47a0723b2f5a9c17e, type: 3}
   m_Name: HeavyWeapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3106777311543712773, guid: c8459c8c5195f7940bf04ab433b65baa, type: 3}
+  prefab: {fileID: 3167055585022251122, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
   type: 2
   description: HeavyWeapon
   bullets: 20

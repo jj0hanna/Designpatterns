@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using drinkObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,6 +14,8 @@ namespace Player
         private float rot = 0f;
         private Vector2 dir = new Vector2();
         private Rigidbody body;
+        
+        public InventoryObject inventory;
         void Start()
         {
         
@@ -55,8 +58,15 @@ namespace Player
             dir = input.Get<Vector2>();
         }
 
-        private void OnDrinkPotion(InputValue input)
+        private void OnDrinkPotion(InputValue input)// (1)
         {
+            var item = GetComponent<HealthPotion>();
+            inventory.RemoveItem(item.item, 1);
+           
+            
+            
+            
+            
           // ref int healtPotions = ref HealthPotion.healthpotions; // refferensen av. minnesplatsen av det jag vill ha. Kolla upp mer
           // if (healtPotions > 0)
           // {

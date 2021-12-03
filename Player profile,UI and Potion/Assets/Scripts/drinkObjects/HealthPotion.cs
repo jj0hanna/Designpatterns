@@ -4,7 +4,7 @@ namespace drinkObjects
 {
     public class HealthPotion : MonoBehaviour
     {
-        public ItemObject item;
+         public ItemObject item;
         
         //public static int healthpotions = 0;
         //public static float hp = 10f;
