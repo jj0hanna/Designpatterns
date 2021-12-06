@@ -60,12 +60,18 @@ namespace Player
 
         private void OnDrinkPotion(InputValue input)// (1)
         {
-            var item = GetComponent<HealthPotion>();
-            inventory.RemoveItem(item.item, 1);
+            if (inventory.Contains(ItemType.HealthPotion ,out ItemType item ))
+            {
+                HealthPotion Object = ScriptableObject.CreateInstance<HealthPotion>();
+              //  Playerscript2.addHP();
+               Object.Drink(GetComponent<Playerscript2>());
+              
+              
+              inventory.RemoveItem(ItemType.HealthPotion, 1);
+            }
+            
+            
            
-            
-            
-            
             
           // ref int healtPotions = ref HealthPotion.healthpotions; // refferensen av. minnesplatsen av det jag vill ha. Kolla upp mer
           // if (healtPotions > 0)

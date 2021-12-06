@@ -13,6 +13,7 @@ public class ShowInventory : MonoBehaviour
     public int ySpace;
     public int numberOfColumn;
 
+    [SerializeField] private GameObject[] Prefabs;
     private Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
 
     
@@ -38,10 +39,10 @@ public class ShowInventory : MonoBehaviour
             }
             else
             {
-                GameObject obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
-                obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-                obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
-                itemsDisplayed.Add(inventory.Container[i], obj);
+                     GameObject obj = Instantiate(Prefabs[(int)inventory.Container[i].item], Vector3.zero, Quaternion.identity, transform);
+                     obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
+                     obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                     itemsDisplayed.Add(inventory.Container[i], obj);
             }
         }
     }
@@ -50,7 +51,7 @@ public class ShowInventory : MonoBehaviour
     {
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            GameObject obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
+            GameObject obj = Instantiate(Prefabs[(int)inventory.Container[i].item], Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
             itemsDisplayed.Add(inventory.Container[i], obj);

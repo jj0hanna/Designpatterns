@@ -32,23 +32,22 @@ namespace Player
 
       }
 
-      public static float getHP()
+      public float getHP()
       {
           return currenthealth;
       }
 
-      public static void addHP(float hp)
+      public void addHP(float hp)
       {
           currenthealth += hp;
       }
+      
 
       public void OnTriggerEnter(Collider other) // if collide with a item
       {
-          var item = other.GetComponent<HealthPotion>();
-          if (item)
+          if (other.CompareTag("HealthPotion"))
           {
-              inventory.AddItem(item.item,1);
-              Debug.Log(item.item);
+              inventory.AddItem(ItemType.HealthPotion,1);
               Destroy(other.gameObject);
           }
       }

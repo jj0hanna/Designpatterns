@@ -7,7 +7,7 @@ public class InventoryObject : ScriptableObject
 {
     public List<InventorySlot> Container = new List<InventorySlot>();
 
-    public void AddItem(ItemObject Item, int Amount)
+    public void AddItem(ItemType Item, int Amount)
     {
         bool hasItem = false;
         for (int i = 0; i < Container.Count; i++) 
@@ -17,7 +17,6 @@ public class InventoryObject : ScriptableObject
                 Container[i].AddAmount(Amount);
                 hasItem = true;
                 break;
-                ;
             }
         }
         if (!hasItem) // if item does not exist in inventory make a new inventoryslot
@@ -26,27 +25,42 @@ public class InventoryObject : ScriptableObject
         }
     }
 
-    public void RemoveItem(ItemObject Item, int Amount)
+    public void RemoveItem(ItemType item, int Amount)
     {
         
         for (int i = 0; i < Container.Count; i++)
         {
-            if (Container[i].item == Item)
+            if (Container[i].item == item)
             {
                 Container[i].RemoveAmount(Amount);
+                //Container.RemoveAt(i);
                 break;
             }
         }
-        
+    }
+
+    public bool Contains(ItemType itemType, out ItemType item)
+    {
+        item = ItemType.Default;
+        int minAmount = 0;
+        for (int i = 0; i < Container.Count ; i++)
+        {
+            if (Container[i].item == itemType && Container[i].amount > 0)
+            {
+                item = Container[i].item;
+                return true;
+            }
+        }
+        return false;
     }
 }
 [System.Serializable]
 public class InventorySlot
 {
-    public ItemObject item;
+    public ItemType item;
     public int amount;
 
-    public InventorySlot(ItemObject Item, int Amount)
+    public InventorySlot(ItemType Item, int Amount)
     {
         item = Item;
         amount = Amount;

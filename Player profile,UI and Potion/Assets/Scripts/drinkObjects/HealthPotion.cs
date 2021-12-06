@@ -1,10 +1,12 @@
+using Player;
 using UnityEngine;
 
 namespace drinkObjects
 {
-    public class HealthPotion : MonoBehaviour
+    public class HealthPotion : PotionObject
     {
          public ItemObject item;
+         private float addHealth = 50;
         
         //public static int healthpotions = 0;
         //public static float hp = 10f;
@@ -20,15 +22,11 @@ namespace drinkObjects
         {
         
         }
-
-       // private void OnTriggerEnter(Collider other)
-       // {
-       //     if (other.CompareTag("Player"))
-       //     {
-       //         healthpotions++;
-       //         Destroy(gameObject);
-       //         Debug.Log(healthpotions);
-       //     }
-       // }
-    }//
+        
+        public override void Drink(Playerscript2 playerscipt)
+        {
+            playerscipt.addHP(addHealth);
+            Debug.Log(playerscipt.getHP());
+        }
+    }
 }
