@@ -32,6 +32,15 @@ public class ShowInventory : MonoBehaviour
     {
         for (int i = 0; i < inventory.Container.Count; i++)
         {
+            
+           //if (inventory.Container[i].amount <= 0) // fixa så bilden försvinner om jag har noll av nått och allt flyttas om man tar bort
+           //{
+           //    Destroy(itemsDisplayed[inventory.Container[i]]);
+           //    itemsDisplayed.Remove(inventory.Container[i]);
+           //    inventory.Container.RemoveAt(i);
+           //    continue;
+
+           //}
             if (itemsDisplayed.ContainsKey(inventory.Container[i]))
             {
                 itemsDisplayed[inventory.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text =
@@ -54,6 +63,7 @@ public class ShowInventory : MonoBehaviour
             GameObject obj = Instantiate(Prefabs[(int)inventory.Container[i].item], Vector3.zero, Quaternion.identity, transform);
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+            
             itemsDisplayed.Add(inventory.Container[i], obj);
             
         }
@@ -61,6 +71,7 @@ public class ShowInventory : MonoBehaviour
 
     public Vector3 GetPosition(int i)
     {
+        
         return new Vector3(xStart+ (xSpace * (i % numberOfColumn)), yStart +(-ySpace * (i / numberOfColumn)), 0f);
     }
 }

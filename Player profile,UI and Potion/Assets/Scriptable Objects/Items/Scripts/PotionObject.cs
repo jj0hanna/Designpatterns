@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Player;
 using UnityEngine;
 [CreateAssetMenu(fileName = "new Default Potion", menuName = "Inventory System/Items/Potion")]
-public abstract class PotionObject : ItemObject
+public class PotionObject : ItemObject
 {
 
     private void Awake()
@@ -12,5 +12,7 @@ public abstract class PotionObject : ItemObject
         type = ItemType.HealthPotion;
     }
 
-    public abstract void Drink(Playerscript2 playerscipt);
+    public void Drink(Playerscript2 playerscipt)
+    {
+    }
 }

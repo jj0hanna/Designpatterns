@@ -37,11 +37,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425970536478557798, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 425970536478557798, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 425970536478557798, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,19 +93,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3167055585022251122, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_Name
-      value: Image Variant 1
+      value: ImageCoin
       objectReference: {fileID: 0}
     - target: {fileID: 8470743667320621132, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8470743667320621132, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_Color.g
-      value: 0.083981514
+      value: 0.9528302
       objectReference: {fileID: 0}
     - target: {fileID: 8470743667320621132, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.9274211
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cf9009b52d1bca4597c3aba61a0f733, type: 3}

@@ -11,7 +11,7 @@ namespace Player
        [SerializeField] private float movmentSpeed = 1;
        [SerializeField] private float rotSpeed = 1;
         
-        private float rot = 0f;
+        //private float rot = 0f;
         private Vector2 dir = new Vector2();
         private Rigidbody body;
         
@@ -60,14 +60,13 @@ namespace Player
 
         private void OnDrinkPotion(InputValue input)// (1)
         {
-            if (inventory.Contains(ItemType.HealthPotion ,out ItemType item ))
+            if (inventory.Contains(ItemType.HealthPotion ,out ItemType item )
+                && Playerscript2.getInstance.getHP() < Playerscript2.getInstance.getMaxHP())
             {
                 HealthPotion Object = ScriptableObject.CreateInstance<HealthPotion>();
-              //  Playerscript2.addHP();
-               Object.Drink(GetComponent<Playerscript2>());
-              
-              
-              inventory.RemoveItem(ItemType.HealthPotion, 1);
+                Object.Drink(GetComponent<Playerscript2>());
+                
+                inventory.RemoveItem(ItemType.HealthPotion, 1);
             }
             
             

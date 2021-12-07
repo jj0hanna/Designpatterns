@@ -33,7 +33,6 @@ public class InventoryObject : ScriptableObject
             if (Container[i].item == item)
             {
                 Container[i].RemoveAmount(Amount);
-                //Container.RemoveAt(i);
                 break;
             }
         }

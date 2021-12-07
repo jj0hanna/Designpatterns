@@ -8,7 +8,7 @@ namespace Game
     {
         private void Awake()
         {
-            Playerscript2 player = Playerscript2.getInstance();
+            Playerscript2 player = Playerscript2.getInstance;
         }
 
         void Start()

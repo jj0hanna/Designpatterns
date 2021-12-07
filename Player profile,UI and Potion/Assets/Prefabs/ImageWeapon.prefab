@@ -13,11 +13,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4260536440385214867, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4260536440385214867, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_Color.r
-      value: 0.06140983
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5424320630828554169, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_Pivot.x
@@ -49,11 +49,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5424320630828554169, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5424320630828554169, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5424320630828554169, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -105,7 +105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7304261814419095981, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}
       propertyPath: m_Name
-      value: Image Variant
+      value: ImageWeapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91b1c9dab9d8bf54aa92ba59469fb2b6, type: 3}

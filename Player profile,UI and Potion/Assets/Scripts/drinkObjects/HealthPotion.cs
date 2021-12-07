@@ -5,8 +5,8 @@ namespace drinkObjects
 {
     public class HealthPotion : PotionObject
     {
-         public ItemObject item;
-         private float addHealth = 50;
+         //public ItemObject item;
+         private int addHealth = 50;
         
         //public static int healthpotions = 0;
         //public static float hp = 10f;
@@ -23,8 +23,9 @@ namespace drinkObjects
         
         }
         
-        public override void Drink(Playerscript2 playerscipt)
+        public new void Drink(Playerscript2 playerscipt)
         {
+            
             playerscipt.addHP(addHealth);
             Debug.Log(playerscipt.getHP());
         }

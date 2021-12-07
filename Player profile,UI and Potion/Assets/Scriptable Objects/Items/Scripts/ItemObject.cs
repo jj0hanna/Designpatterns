@@ -5,8 +5,8 @@ public enum ItemType
 {
     HealthPotion,
     Weapon,
-    ManaPotion,
     Coins,
+    ManaPotion,
     Default,
 }
 
