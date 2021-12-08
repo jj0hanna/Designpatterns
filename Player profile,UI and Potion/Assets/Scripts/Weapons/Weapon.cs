@@ -8,8 +8,6 @@ namespace Weapons
         private float bulletSpeed;
         private static Weapon weapon;
         
-        
-
         private Weapon()
         {
             bullets = 10;
@@ -17,19 +15,6 @@ namespace Weapons
         }
 
         public static Weapon GetWeapon;
-     //  {
-     //      //return weapon
-     //  }
-
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+     
     }
 }

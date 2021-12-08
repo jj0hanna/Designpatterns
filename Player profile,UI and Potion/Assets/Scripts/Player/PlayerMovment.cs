@@ -9,27 +9,17 @@ namespace Player
     public class PlayerMovment : MonoBehaviour
     {
        [SerializeField] private float movmentSpeed = 1;
-       [SerializeField] private float rotSpeed = 1;
-        
-        //private float rot = 0f;
+       
         private Vector2 dir = new Vector2();
         private Rigidbody body;
         
         public InventoryObject inventory;
-        void Start()
-        {
         
-        }
-
         private void Awake()
         {
             body = gameObject.GetComponent<Rigidbody>();
         }
-        
-        void Update()
-        {
-        
-        }
+       
         private void Move()
         {
             Vector3 velocity = new Vector3();
@@ -41,16 +31,9 @@ namespace Player
             
             body.velocity = velocity;
         }
-
-        private void Rotate()
-        {
-            
-        }
-
         private void FixedUpdate()
         {
             Move();
-            //Rotate();
         }
 
         private void OnMove(InputValue input)
@@ -61,28 +44,13 @@ namespace Player
         private void OnDrinkPotion(InputValue input)// (1)
         {
             if (inventory.Contains(ItemType.HealthPotion ,out ItemType item )
-                && Playerscript2.getInstance.getHP() < Playerscript2.getInstance.getMaxHP())
+                && Playerscript2.GetInstance.getHP() < Playerscript2.GetInstance.getMaxHP())
             {
                 HealthPotion Object = ScriptableObject.CreateInstance<HealthPotion>();
                 Object.Drink(GetComponent<Playerscript2>());
                 
                 inventory.RemoveItem(ItemType.HealthPotion, 1);
             }
-            
-            
-           
-            
-          // ref int healtPotions = ref HealthPotion.healthpotions; // refferensen av. minnesplatsen av det jag vill ha. Kolla upp mer
-          // if (healtPotions > 0)
-          // {
-          //     Playerscript2.addHP(HealthPotion.hp);
-          //     healtPotions--;
-          // }
-          // else if (healtPotions <= 0)
-          // {
-          //     Debug.Log("you dont have any potions sorii");
-          // }
-            
         }
 
     }

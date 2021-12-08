@@ -5,14 +5,10 @@ namespace drinkObjects
 {
     public class HealthPotion : PotionObject
     {
-         //public ItemObject item;
+      
          private int addHealth = 50;
-        
-        //public static int healthpotions = 0;
-        //public static float hp = 10f;
-        
-    
-        void Start()
+         
+         void Start()
         {
         
         }
@@ -25,7 +21,6 @@ namespace drinkObjects
         
         public new void Drink(Playerscript2 playerscipt)
         {
-            
             playerscipt.addHP(addHealth);
             Debug.Log(playerscipt.getHP());
         }
