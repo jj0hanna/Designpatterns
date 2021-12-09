@@ -8,7 +8,7 @@ And to be able to get global access to the players instance. T.e.x Playerscript2
 2- If im not mistaken then i used Composite pattern for my class "ItemObject" since i can create different objects like
 HealthPotion,Weapon, Coins etc
 
-3- i Made a factory pattern in my "PotionFactory" class. If i bump into the "cubefactory" with my player then it spawn
+3- i Made a factory pattern in my "PotionFactory" class. If i bump into the "cubefactory" in the middle with my player then it spawn
 a new potion. In this factory i could also add different potions etc if i wanted to.
 
 4-I used observer pattern between the playerscript2 and the UI manager. So when i add HP to the player 
