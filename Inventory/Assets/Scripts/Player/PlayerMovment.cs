@@ -1,8 +1,6 @@
-using System;
-using System.ComponentModel;
-using drinkObjects;
+
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 
 namespace Player
 {
@@ -12,7 +10,7 @@ namespace Player
        
         private Rigidbody body;
         
-        public InventoryObject inventory;
+        //public InventoryObject inventory;
         
         
         private void Awake()

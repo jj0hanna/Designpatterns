@@ -10,7 +10,6 @@ namespace Game
 
         void Awake()
         {
-            
             Playerscript2.updateHealth += ShowHealth;
         }
         void ShowHealth(int updatehealth)

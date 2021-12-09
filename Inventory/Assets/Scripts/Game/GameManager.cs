@@ -11,15 +11,5 @@ namespace Game
             Playerscript2 player = Playerscript2.GetInstance;
         }
 
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
     }
 }

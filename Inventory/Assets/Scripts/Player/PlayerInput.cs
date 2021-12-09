@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using drinkObjects;
 using Player;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,16 +10,10 @@ public class PlayerInput : MonoBehaviour
 {
     private Vector2 dir = new Vector2();
     public InventoryObject inventory;
-    //private Rigidbody body;
 
     public Vector2 Dirr
     {
         get => dir;
-    }
-
-    private void Awake()
-    {
-       //gameObject.GetComponent<Rigidbody>();
     }
 
     public void OnMove(InputValue input)

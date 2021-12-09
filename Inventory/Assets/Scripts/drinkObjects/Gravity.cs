@@ -19,8 +19,6 @@ public class Gravity : MonoBehaviour
     {
         body = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (transform.position.y >= yhight)

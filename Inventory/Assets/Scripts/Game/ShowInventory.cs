@@ -21,8 +21,6 @@ public class ShowInventory : MonoBehaviour
     {
         CreateDisplay();
     }
-
-    
     void Update()
     {
         UpdateDisplay();
@@ -33,7 +31,7 @@ public class ShowInventory : MonoBehaviour
         for (int i = 0; i < inventory.Container.Count; i++)
         {
             
-           //if (inventory.Container[i].amount <= 0) // fixa så bilden försvinner om jag har noll av nått och allt flyttas om man tar bort
+           //if (inventory.Container[i].amount <= 0) // fixa så bilden försvinner om jag har noll av nått och allt flyttas om man tar bort använder inte måste fixas
            //{
            //    Destroy(itemsDisplayed[inventory.Container[i]]);
            //    itemsDisplayed.Remove(inventory.Container[i]);
@@ -71,7 +69,6 @@ public class ShowInventory : MonoBehaviour
 
     public Vector3 GetPosition(int i)
     {
-        
         return new Vector3(xStart+ (xSpace * (i % numberOfColumn)), yStart +(-ySpace * (i / numberOfColumn)), 0f);
     }
 }

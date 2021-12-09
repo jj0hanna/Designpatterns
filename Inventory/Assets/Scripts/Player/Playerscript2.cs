@@ -1,6 +1,4 @@
 using System;
-using drinkObjects;
-using UnityEditor;
 using UnityEngine;
 using System.Linq;
 
