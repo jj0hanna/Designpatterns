@@ -8,23 +8,14 @@ namespace Game
     {
         public Text uiHealth;
 
-        void Start()
+        void Awake()
         {
             
+            Playerscript2.updateHealth += ShowHealth;
         }
-
-        // Update is called once per frame
-        void Update()
+        void ShowHealth(int updatehealth)
         {
-        showHealth();
-        }
-
-        void showHealth()
-        {
-           
-                //uiHealth.text = " Health:" + Playerscript2.getHP();
-            
-            //uiHealth.text = " Score:" + currenthealth.ToString();
+            uiHealth.text = " Health:" + updatehealth;
         }
     }
 }

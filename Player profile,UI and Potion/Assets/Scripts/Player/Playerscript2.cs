@@ -14,6 +14,7 @@ namespace Player
         private static GameObject prefabPlayer;
 
         public InventoryObject inventory;
+        public static event Action<int> updateHealth;
         
 
         private static Playerscript2 _Instance;
@@ -29,6 +30,11 @@ namespace Player
             {
                 _Instance = this;
             }
+        }
+
+        private void Start()
+        {
+            updateHealth?.Invoke(currenthealth);
         }
 
         private void OnDestroy()
@@ -66,6 +72,7 @@ namespace Player
       public void addHP(int hp)
       {
           currenthealth += hp;
+          updateHealth?.Invoke(currenthealth);
       }
       
       public void OnTriggerEnter(Collider other) // if collide with a item

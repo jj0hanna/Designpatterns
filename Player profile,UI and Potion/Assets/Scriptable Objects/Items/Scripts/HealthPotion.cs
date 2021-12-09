@@ -8,17 +8,6 @@ namespace drinkObjects
       
          private int addHealth = 50;
          
-         void Start()
-        {
-        
-        }
-
-    
-        void Update()
-        {
-        
-        }
-        
         public new void Drink(Playerscript2 playerscipt)
         {
             playerscipt.addHP(addHealth);
