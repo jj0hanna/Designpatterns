@@ -40,7 +40,6 @@ public class InventoryObject : ScriptableObject
     public bool Contains(ItemType itemType, out ItemType item)
     {
         item = ItemType.Default;
-        int minAmount = 0;
         for (int i = 0; i < Container.Count ; i++)
         {
             if (Container[i].item == itemType && Container[i].amount > 0)

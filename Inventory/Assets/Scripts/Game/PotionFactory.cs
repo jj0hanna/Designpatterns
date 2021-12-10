@@ -7,17 +7,22 @@ using Random = UnityEngine.Random;
 
 public class PotionFactory : MonoBehaviour
 {
-    [SerializeField] private Transform potionPrefab;
-    private Transform CreatePotion()
+    [SerializeField] private Transform[] spawnObjectPrefabs;
+    [SerializeField] private float yForce = 100f;
+    [SerializeField] private float xForce = 50f;
+    [SerializeField] private float zForce = 50f;
+    private Transform CreateObject()
     {
-        return Instantiate(potionPrefab, transform);
+        Transform obj = spawnObjectPrefabs[Random.Range(0, spawnObjectPrefabs.Length)];
+        
+        return Instantiate(obj, transform);
     }
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag("Player"))
         {
-            CreatePotion().GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-50f, 50f),100f,Random.Range(-50f, 50f)));
+            CreateObject().GetComponent<Rigidbody>().AddForce(new Vector3(Random.Range(-xForce, xForce),yForce,Random.Range(-zForce, zForce)));
         }
     }
 }

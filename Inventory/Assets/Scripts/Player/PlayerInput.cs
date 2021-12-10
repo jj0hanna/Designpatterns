@@ -32,4 +32,5 @@ public class PlayerInput : MonoBehaviour
             inventory.RemoveItem(ItemType.HealthPotion, 1);
         }
     }
+    
 }

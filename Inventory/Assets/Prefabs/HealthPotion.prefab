@@ -125,4 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6d8dc16a2f97c4dace2cdcbc98c775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravityscale: 5
+  gravityscale: 50
+  yhight: 10

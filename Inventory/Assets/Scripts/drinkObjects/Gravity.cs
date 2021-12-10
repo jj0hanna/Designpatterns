@@ -7,7 +7,7 @@ public class Gravity : MonoBehaviour
 {
     private Rigidbody body;
     [SerializeField] private float gravityscale = 8;
-    private float yhight = 10;
+    [SerializeField] private float yhight = 10;
     private float yminHight = 1;
     private bool isOnmaxHight;
     void Start()

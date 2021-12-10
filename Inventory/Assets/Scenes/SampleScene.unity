@@ -1308,7 +1308,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91aa0503c8af34e44b6369a34e3414f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionPrefab: {fileID: 5983678357408026220, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
+  spawnObjectPrefabs:
+  - {fileID: 5983678357408026220, guid: 24c6058585700e34491e5a771a4b774f, type: 3}
+  - {fileID: 5983678357408026220, guid: a73733f3fe4f6454bb44cb7041a4174e, type: 3}
+  - {fileID: 5983678357408026220, guid: 81cec3ffb9cbb76448ada5662cf7369d, type: 3}
+  yForce: 800
+  xForce: 500
+  zForce: 500
 --- !u!1 &1942148963
 GameObject:
   m_ObjectHideFlags: 0

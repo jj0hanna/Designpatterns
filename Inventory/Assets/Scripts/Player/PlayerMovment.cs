@@ -10,9 +10,6 @@ namespace Player
        
         private Rigidbody body;
         
-        //public InventoryObject inventory;
-        
-        
         private void Awake()
         {
             body = gameObject.GetComponent<Rigidbody>();
